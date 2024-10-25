@@ -125,6 +125,16 @@ h2 {
     transition: transform 0.3s ease; /* Transition for motion blur */
 }
 
+/* Circular images inside frames */
+.frame img {
+    width: 200px; /* Adjust width to 200px */
+    height: 200px; /* Adjust height to 200px */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensure the entire image fits within the circular frame */
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.75); /* Dark glow effect */
+    margin-bottom: 10px; /* Space below the image */
+}
+
 /* Logo inside frames */
 .frame-logo {
     width: 50px; /* Width of the logo in frames */
@@ -132,16 +142,6 @@ h2 {
     display: block; /* Make it block-level */
     margin: 0 auto 10px; /* Center the logo */
     box-shadow: 0 0 10px rgba(34, 34, 34, 0.75), 0 0 20px rgba(34, 34, 34, 0.5); /* Dark glow effect */
-}
-
-/* Circular images inside frames */
-.frame img {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the entire image fits within the circular frame */
-    box-shadow: 0 0 10px rgba(34, 34, 34, 0.75); /* Dark glow effect */
-    margin-bottom: 10px; /* Space below the image */
 }
 
 /* Heading inside frames */
@@ -203,65 +203,51 @@ textarea:focus {
 /* Submit button styling */
 input[type="submit"] {
     background-color: rgba(34, 34, 34, 0.8); /* Dark background for the button */
-    color: white; /* White text for visibility */
+    color: white; /* White text */
     padding: 10px 20px;
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 /* Submit button hover effect */
 input[type="submit"]:hover {
     background-color: rgba(34, 34, 34, 1); /* Darker on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
 }
 
 /* Footer styling */
 footer {
-    background-color: rgba(255, 250, 230, 0.8); /* 80% transparent pastel cream */
-    color: #222222; /* Dark text for visibility */
-    text-align: center; /* Centered text */
-    padding: 10px;
-    margin-top: 20px; /* Space above footer */
-    box-shadow: 0 -2px 10px rgba(34, 34, 34, 0.5); /* Shadow effect for depth */
+    background-color: rgba(34, 34, 34, 0.8); /* Dark background for footer */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 20px;
+    position: relative; /* Position relative for child elements */
+    bottom: 0; /* Stick to bottom */
+    left: 0; /* Stick to left */
+    right: 0; /* Stick to right */
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    .scrollable-frames {
-        flex-direction: column; /* Stack frames vertically */
-        align-items: center; /* Center frames */
-    }
-
-    .frame {
-        width: 90%; /* Full width for frames */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 20px; /* Space below frames */
-    }
-}
-
-/* Keyframe animations */
+/* Keyframes for fade-in animation */
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Start fully transparent */
+        opacity: 0;
     }
     100% {
-        opacity: 1; /* End fully visible */
+        opacity: 1;
     }
 }
 
+/* Keyframes for slide-down animation */
 @keyframes slideDown {
     0% {
-        transform: translateY(-20px); /* Start slightly above */
-        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px);
+        opacity: 0;
     }
     100% {
-        transform: translateY(0); /* End at original position */
-        opacity: 1; /* End fully visible */
+        transform: translateY(0);
+        opacity: 1;
     }
 }
