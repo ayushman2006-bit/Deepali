@@ -16,25 +16,25 @@ body {
 /* Dynamic background color animation */
 @keyframes backgroundAnimation {
     0% { background-color: rgba(0, 0, 0, 1); }
-    50% { background-color: rgba(25, 0, 0, 1); }
+    50% { background-color: rgba(255, 250, 230, 1); } /* Light pastel cream */
     100% { background-color: rgba(0, 0, 0, 1); }
 }
 
 /* Start the background animation */
 body {
-    animation: backgroundAnimation 10s infinite alternate; /* Background changes every 7 seconds */
+    animation: backgroundAnimation 10s infinite alternate; /* Background changes every 10 seconds */
 }
 
-/* Header styling with black background and neon-red text */
+/* Header styling with black background and pastel cream text */
 header {
     background-color: rgba(0, 0, 0, 0.8); /* 80% transparent black background */
-    color: rgba(255, 0, 0, 1); /* Neon red text */
+    color: rgba(255, 250, 230, 1); /* Pastel cream text */
     text-align: left; /* Align text to the left */
     padding: 20px;
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
     border-radius: 0 0 0px 0px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.75); /* Soft glowing red edges */
+    box-shadow: 0 0 15px rgba(255, 250, 230, 0.75); /* Soft glowing pastel cream edges */
     animation: slideDown 1s ease-in-out;
 }
 
@@ -61,28 +61,28 @@ nav a {
     color: #ffffff; /* Change text to white */
     padding: 10px 20px;
     border-radius: 25px;
-    background-color: rgba(200, 5, 6, 0.95); /* 95% transparent matching background */
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Soft glow */
+    background-color: rgba(255, 250, 230, 0.95); /* Pastel cream matching background */
+    box-shadow: 0 0 10px rgba(255, 250, 230, 0.5); /* Soft glow */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     white-space: nowrap; /* Prevents text from breaking into multiple lines */
 }
 
 /* Hover effect for buttons with increased glow */
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Slightly lighter on hover */
+    background-color: rgba(255, 250, 220, 0.9); /* Slightly lighter on hover */
     color: #ffffff; /* Keep text white */
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.75); /* Stronger glow on hover */
+    box-shadow: 0 0 20px rgba(255, 250, 230, 0.75); /* Stronger glow on hover */
 }
 
-/* Section styling with black background and neon-red soft-glow edges */
+/* Section styling with black background and pastel cream soft-glow edges */
 section {
     background-color: rgba(0, 0, 0, 0.25); /* 20% opaque (80% transparent) */
     padding: 20px;
     border-radius: 20px;
     margin: 20px;
     color: #ffffff; /* White text */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Glowing edges for sections */
+    box-shadow: 0 0 20px rgba(255, 250, 230, 0.5); /* Glowing edges for sections */
 }
 
 /* About section styling */
@@ -92,7 +92,7 @@ section {
     border-radius: 20px;
     margin: 20px;
     color: #ffffff; /* White text */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Glowing edges for sections */
+    box-shadow: 0 0 20px rgba(255, 250, 230, 0.5); /* Glowing edges for sections */
 }
 
 /* About header styling */
@@ -109,7 +109,7 @@ section {
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the container */
     margin: 20px auto; /* Space above and center below the paragraph */
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Glowing effect for the image */
+    box-shadow: 0 0 10px rgba(255, 250, 230, 0.5); /* Glowing effect for the image */
 }
 
 /* Adjusting the header */
@@ -132,7 +132,7 @@ h2 {
     width: 300px; /* Set width of each frame */
     margin-right: 20px; /* Space between frames */
     padding: 20px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Glowing effect */
+    box-shadow: 0 0 15px rgba(255, 250, 230, 0.5); /* Glowing effect */
     flex: none; /* Prevent frames from shrinking */
     transition: transform 0.3s ease; /* Transition for motion blur */
 }
@@ -143,7 +143,7 @@ h2 {
     height: 50px; /* Height of the logo in frames */
     display: block; /* Make it block-level */
     margin: 0 auto 10px; /* Center the logo */
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.75), 0 0 20px rgba(255, 0, 0, 0.5); /* Glowing effect */
+    box-shadow: 0 0 10px rgba(255, 250, 230, 0.75), 0 0 20px rgba(255, 250, 230, 0.5); /* Glowing effect */
 }
 
 /* Circular images inside frames */
@@ -152,7 +152,7 @@ h2 {
     height: 100px; /* Adjust height as needed */
     border-radius: 50%; /* Make the image circular */
     object-fit: contain; /* Ensure the entire image fits within the circular frame */
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.75); /* Glowing effect */
+    box-shadow: 0 0 10px rgba(255, 250, 230, 0.75); /* Glowing effect */
     margin-bottom: 10px; /* Space below the image */
 }
 
@@ -168,12 +168,12 @@ h3 {
 }
 
 .scrollable-frames::-webkit-scrollbar-thumb {
-    background: rgba(255, 0, 0, 0.5); /* Scrollbar color */
+    background: rgba(255, 250, 230, 0.5); /* Scrollbar color */
     border-radius: 10px; /* Rounded corners */
 }
 
 .scrollable-frames::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 0, 0, 0.8); /* Darker on hover */
+    background: rgba(255, 250, 230, 0.8); /* Darker on hover */
 }
 
 /* Scrollable frames hover effect */
@@ -186,7 +186,7 @@ form {
     background-color: rgba(0, 0, 0, 0.75); /* 75% transparent black background for the form */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.75); /* Glowing effect */
+    box-shadow: 0 0 15px rgba(255, 250, 230, 0.75); /* Glowing effect */
     margin: 20px auto; /* Center the form */
     transition: background-color 0.5s ease; /* Smooth transition for form background */
 }
@@ -197,92 +197,37 @@ input[type="email"],
 textarea {
     width: 100%; /* Full width */
     padding: 10px; /* Padding inside inputs */
-    border: 1px solid rgba(255, 0, 0, 0.5); /* Neon-red border */
+    border: 1px solid rgba(255, 250, 230, 0.5); /* Pastel cream border */
     border-radius: 5px; /* Rounded corners */
-    background-color: rgba(34, 34, 34, 0.95); /* 95% transparent dark background */
+    background-color: rgba(34, 34, 34, 0.95); /* 95% transparent black background */
     color: #ffffff; /* White text */
-    font-size: 0.750rem; /* Reduce font size to 2/5 of original */
-    margin-bottom: 10px; /* Space below inputs */
-    transition: background-color 0.3s ease; /* Smooth transition on focus */
+    margin-bottom: 15px; /* Space below each input */
 }
 
-/* Input and textarea focus effect */
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    background-color: rgba(34, 34, 34, 0.9); /* Darker background on focus */
-    outline: none; /* Remove outline */
-}
-
-/* Submit button styling */
-input[type="submit"] {
-    background-color: rgba(0, 0, 0, 0.95); /* 95% transparent matching background */
-    color: #ffffff; /* White text */
-    border: none; /* Remove border */
-    border-radius: 5px;
-    padding: 10px 20px; /* Padding for button */
+/* Button styling */
+button {
+    background-color: rgba(255, 250, 230, 0.95); /* Pastel cream */
+    color: rgba(34, 34, 34, 1); /* Dark text for contrast */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.75); /* Glowing effect */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+    box-shadow: 0 0 10px rgba(255, 250, 230, 0.75); /* Glowing effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-/* Submit button hover effect */
-input[type="submit"]:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Slightly darker on hover */
-    transform: scale(1.05); /* Slight scale effect on hover */
+/* Button hover effect */
+button:hover {
+    background-color: rgba(255, 250, 220, 0.9); /* Slightly lighter on hover */
+    box-shadow: 0 0 15px rgba(255, 250, 230, 1); /* Stronger glow on hover */
 }
 
 /* Footer styling */
 footer {
     text-align: center; /* Center text in footer */
-    padding: 10px; /* Footer padding */
-    background-color: rgba(0, 0, 0, 0.8); /* 80% transparent black footer */
-    color: rgba(255, 0, 0, 1); /* Neon red text */
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.75); /* Glowing effect */
-    transition: background-color 0.5s ease; /* Smooth transition for footer background */
-    width: 100%; /* Full width */
-    position: fixed; /* Fix footer to the bottom */
-    bottom: 0; /* Align to the bottom */
-}
-
-/* Heading styles */
-h1, h2, h3, h4, h5 {
-    font-family: 'DynaPuff', cursive; /* Updated font for headings */
-    font-weight: 700; /* Bold weight for headings */
-}
-
-/* Responsive heading sizes (2/5 of original) */
-h1 {
-    font-size: 1.684rem; /* 26.944px */
-}
-
-h2 {
-    font-size: 1.263rem; /* 20.52px */
-}
-
-h3 {
-    font-size: 0.947rem; /* 15.152px */
-}
-
-h4 {
-    font-size: 0.711rem; /* 11.376px */
-}
-
-h5 {
-    font-size: 0.533rem; /* 8.528px */
-}
-
-small {
-    font-size: 0.300rem; /* 4.8px */
-}
-
-/* Footer fixed to bottom */
-.container {
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Align children in a column */
-    min-height: 100vh; /* Minimum height to fill the viewport */
-}
-
-main {
-    flex: 1; /* Allow the main content to grow */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* 80% transparent black background */
+    color: rgba(255, 250, 230, 1); /* Pastel cream text */
+    box-shadow: 0 0 15px rgba(255, 250, 230, 0.5); /* Glowing effect */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
 }
