@@ -21,7 +21,7 @@ header {
     padding: 20px;
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
-    border-radius: 0 0 0px 0px;
+    border-radius: 0 0 0 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.75); /* Soft glowing edges */
     animation: slideDown 1s ease-in-out;
 }
@@ -46,7 +46,7 @@ nav {
 nav a {
     margin: 10px;
     text-decoration: none;
-    color: #222222; /* Dark text for visibility */
+    color: #000000; /* Changed text color to black */
     padding: 10px 20px;
     border-radius: 25px;
     background-color: rgba(255, 250, 230, 0.9); /* Pastel cream matching background */
@@ -58,7 +58,7 @@ nav a {
 /* Hover effect for buttons with increased glow */
 nav a:hover {
     background-color: rgba(255, 250, 220, 0.9); /* Slightly lighter on hover */
-    color: #222222; /* Keep text dark */
+    color: #000000; /* Keep text black on hover */
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(34, 34, 34, 0.75); /* Stronger shadow on hover */
 }
@@ -74,14 +74,6 @@ section {
 }
 
 /* About section styling */
-.about-section {
-    padding: 20px;
-    background-color: rgba(255, 250, 230, 0.8); /* 80% transparent pastel cream */
-    border-radius: 20px;
-    margin: 20px;
-    color: #222222; /* Dark text */
-    box-shadow: 0 0 20px rgba(34, 34, 34, 0.5); /* Glowing edges for sections */
-}
 
 /* About header styling */
 .about-header {
@@ -93,16 +85,35 @@ section {
 /* Circular profile image styling */
 .profile-image {
     width: 100px; /* Set desired width */
-    height: 100px; /* Set desired height */
+    height: auto; /* Set desired height */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the container */
     margin: 20px auto; /* Space above and center below the paragraph */
     box-shadow: 0 0 10px rgba(34, 34, 34, 0.5); /* Dark glow effect for the image */
 }
 
+.swim-image {
+    width: 250px; /* Set desired width */
+    height: auto; /* Set desired height */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the container */
+    margin: 20px auto; /* Space above and center below the paragraph */
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.5); /* Dark glow effect for the image */
+}
+
+
 /* Adjusting the header */
 h2 {
     margin: 0; /* Remove default margin */
+}
+
+.pic {
+    width: 50px; /* Set desired width */
+    height: 50px; /* Set desired height */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the container */
+    margin: 20px auto; /* Space above and center below the paragraph */
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.5); /* Dark glow effect for the image */
 }
 
 /* Scrollable frames container */
@@ -203,51 +214,69 @@ textarea:focus {
 /* Submit button styling */
 input[type="submit"] {
     background-color: rgba(34, 34, 34, 0.8); /* Dark background for the button */
-    color: white; /* White text */
-    padding: 10px 20px;
-    border: none; /* No border */
+    color: #fff; /* White text for contrast */
+    padding: 10px 20px; /* Padding around the button */
+    border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for button */
 }
 
 /* Submit button hover effect */
 input[type="submit"]:hover {
     background-color: rgba(34, 34, 34, 1); /* Darker on hover */
-    transform: scale(1.05); /* Slightly larger on hover */
 }
 
 /* Footer styling */
 footer {
-    background-color: rgba(34, 34, 34, 0.8); /* Dark background for footer */
-    color: white; /* White text */
-    text-align: center; /* Center text */
-    padding: 20px;
-    position: relative; /* Position relative for child elements */
-    bottom: 0; /* Stick to bottom */
-    left: 0; /* Stick to left */
-    right: 0; /* Stick to right */
-    animation: fadeIn 1s ease-in-out;
+    background-color: rgba(255, 250, 230, 0.8); /* Pastel cream background at 80% transparency */
+    color: rgba(34, 34, 34, 1); /* Dark text */
+    text-align: center; /* Centered text */
+    padding: 20px; /* Padding for footer */
+    position: relative; /* Positioning context for child elements */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Shadow above the footer */
 }
 
-/* Keyframes for fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items in header */
+        align-items: flex-start; /* Align items to start */
     }
-    100% {
-        opacity: 1;
+
+    nav {
+        flex-direction: column; /* Stack nav items */
+    }
+
+    .frame {
+        width: 90%; /* Make frames full width on small screens */
+    }
+
+    /* About section adjustments */
+    .profile-image {
+        width: 80px; /* Smaller profile image on mobile */
+        height: 80px; /* Smaller profile image on mobile */
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Full-width submit button */
     }
 }
 
-/* Keyframes for slide-down animation */
-@keyframes slideDown {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Image sizing for NPTEL */
+img {
+    max-width: 300px; /* Set maximum width for images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it behaves as a block element */
+    margin: 0 auto; /* Center the images */
+}
+
+/* Scrollable text box styling */
+
+/* Prevent content from wrapping */
+.scrollable-text-box > * {
+    white-space: nowrap; /* Prevent line breaks */
+    margin-right: 15px; /* Space between items */
 }
